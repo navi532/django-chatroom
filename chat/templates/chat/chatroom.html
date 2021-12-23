@@ -28,16 +28,9 @@
           <main class="px-3">
             <h1>ChatRoom</h1>
             
-            <form method="post" class = "lead">{% csrf_token %}
-      
-                <label for="basic-url" class="form-label">What chatroom would you like to go?</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">https://mysite.com/chat/</span>
-                    <input type="text" required placeholder="roomname" name = "room" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-                <button  type="sumbit" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Enter!</button>
-            
-            </form>
+            <p class = "lead">
+                I'm in Chatroom : {{room}}
+            </p>
           </main>
 
           <footer class="mt-auto text-white-50">
