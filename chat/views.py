@@ -1,10 +1,12 @@
-from django.shortcuts import render
-
+from django.shortcuts import redirect, render
+from django.urls import reverse
 # Create your views here.
 
 def index(response):
-    print(response.POST)
-
+    
+    if response.POST :
+        print(response.POST['room'])
+        return redirect(reverse('chatroom',kwargs = {'room_name': str(response.POST['room'])}))
 
     return render(response,'chat/index.html',{})
 
