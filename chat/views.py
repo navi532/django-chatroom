@@ -5,7 +5,6 @@ from django.urls import reverse
 def index(response):
     
     if response.POST :
-        print(response.POST['room'])
         return redirect(reverse('chatroom',kwargs = {'room_name': str(response.POST['room'])}))
 
     return render(response,'chat/index.html',{})
